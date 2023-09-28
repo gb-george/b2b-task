@@ -1,0 +1,31 @@
+.table-container {
+    border: 1px solid #ccc;
+    margin: 20px;
+    padding: 10px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-top: 1px solid;
+}
+
+tr {
+    text-align: center;
+    border: 1px solid;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+thead td {
+    border: 0px;
+}
+
+tbody > tr {
+    border-left: 0px;
+    border-right: 0px;
+}

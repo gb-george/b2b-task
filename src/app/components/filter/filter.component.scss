@@ -1,0 +1,39 @@
+.filter-container {
+    margin-bottom: 20px;
+    min-height: 80px;
+}
+
+
+.input-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.input-group {
+    flex: 1;
+    margin-right: 10px;
+    text-align: center;
+}
+
+
+label {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+.row {
+    display: flex;
+}
+
+.additionalIDsInput {
+    width: 20rem;
+}
+
+.error {
+    color: #ff0000;
+    font-size: 14px;
+    margin-top: 4px;
+}

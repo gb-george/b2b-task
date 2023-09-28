@@ -1,0 +1,27 @@
+<div class="filter-container">
+    <form [formGroup]="filterForm" class="row">
+        <div class="input-group">
+            <label for="milliseconds">Timer, ms</label>
+            <input type="number" id="milliseconds" formControlName="milliseconds"
+                (ngModelChange)="onMillisecondsChange($event)">
+            <div class="error" *ngIf="filterForm.get('milliseconds').hasError('required')">Milliseconds are required.
+            </div>
+            <div class="error" *ngIf="filterForm.get('milliseconds').hasError('nan')">Invalid Number.</div>
+        </div>
+
+        <div class="input-group">
+            <label for="arraySize">Array Size</label>
+            <input type="number" id="arraySize" formControlName="arraySize"
+                (ngModelChange)="onArraySizeChange($event)">
+            <div class="error" *ngIf="filterForm.get('arraySize').hasError('required')">Array Size is required.</div>
+            <div class="error" *ngIf="filterForm.get('arraySize').hasError('nan')">Invalid Number.</div>
+        </div>
+
+        <div class="input-group">
+            <label for="additionalIDs">Additional array ids</label>
+            <input type="text" id="additionalIDs" class="additionalIDsInput" formControlName="additionalIDs"
+            (ngModelChange)="onAdditionalIDsChange($event)">
+            <div class="error" *ngIf="filterForm.get('additionalIDs').hasError('invalid') ">Invalid Number(s) (Numbers can be separated by comma).</div>
+        </div>
+    </form>
+</div>

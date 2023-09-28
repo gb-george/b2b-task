@@ -1,0 +1,35 @@
+<div class="table-contianer">
+    <table>
+        <thead>
+            <td>id</td>
+            <td>int</td>
+            <td>float</td>
+            <td>color</td>
+            <td>child</td>
+        </thead>
+        <tbody>
+            <tr *ngFor="let element of dataElements;">
+                <td>{{ element.id }}</td>
+                <td>{{ element.int }}</td>
+                <td>{{ element.float }}</td>
+                <td>
+                    <span [style.backgroundColor]="element.color"> {{ element.color }} </span>
+                </td>
+                <td>
+                    <table>
+                        <tr>
+                            <td>ID:</td>
+                            <td>{{ element.child.id }}</td>
+                        </tr>
+                        <tr>
+                            <td>Color:</td>
+                            <td>
+                                <span [style.backgroundColor]="element.child.color"> {{ element.child.color }} </span>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
