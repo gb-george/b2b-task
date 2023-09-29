@@ -8,7 +8,7 @@
             <td>child</td>
         </thead>
         <tbody>
-            <tr *ngFor="let element of dataElements;">
+            <tr *ngFor="let element of dataElements; trackBy: trackByItemId;">
                 <td>{{ element.id }}</td>
                 <td>{{ element.int }}</td>
                 <td>{{ element.float }}</td>
